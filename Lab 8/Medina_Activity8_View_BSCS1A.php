@@ -12,7 +12,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 // Retrieve data from the database
-$sql = "SELECT name, email, message FROM test";
+$sql = "SELECT name, email, message FROM `test`";
 $result = $conn->query($sql);
 
 ?>
