@@ -17,7 +17,7 @@ $email = $_POST['email'];
 $message = $_POST['message'];
 
 //Prepare the INSERT statement
-$sql = "INSERT INTO test (name, email, message) VALUES (?, ?, ?)";
+$sql = "INSERT INTO `test` (name, email, message) VALUES (?, ?, ?)";
 $stmt = $conn->prepare($sql);
 $stmt ->bind_param("sss", $name, $email, $message);
 
