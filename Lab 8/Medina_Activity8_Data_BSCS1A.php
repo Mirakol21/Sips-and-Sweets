@@ -23,8 +23,10 @@ $stmt ->bind_param("sss", $name, $email, $message);
 
 //Execute the statement
 if ($stmt->execute()) {
+	echo "Form data saved successfully.";
+} else {
 	echo "Error: " . $stmt->error;
-}
+}	
 //Close the connection
 $stmt->close();
 $conn->close();
